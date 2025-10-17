@@ -112,9 +112,9 @@ with st.container(border=True):
 
     # st.write(dm)
     # prediction
-    st.write(final_input)
+    # st.write(final_input)
     if st.button("Predict price"):
         final_input = np.array(final_input, dtype=np.float32).reshape(1, -1)
-        st.write(final_input)
+        # st.write(final_input)
         prediction = model.predict(final_input)[0]
         st.success(f"Estimated Car price: Rs. {int(prediction)}")
